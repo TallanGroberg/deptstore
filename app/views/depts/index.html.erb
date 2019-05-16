@@ -1,2 +1,7 @@
-<h1>Depts#index</h1>
-<p>Find me in app/views/depts/index.html.erb</p>
+<h1>click to view a department</h1>
+<ul>
+<%# <%= link_to 'create', shop_dept_path(@shop) %> %>
+<%= @depts.each do |depts| %>
+<li><%= link_to dept.name, [@shop, @dept] %></li>
+    <% end %>
+<ul/>
