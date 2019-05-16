@@ -1,7 +1,6 @@
-<h1>click to view a department</h1>
-<ul>
-<%# <%= link_to 'create', shop_dept_path(@shop) %> %>
-<%= @depts.each do |depts| %>
-<li><%= link_to dept.name, [@shop, @dept] %></li>
-    <% end %>
-<ul/>
+<h1><%= @shop.name %> - </h1>
+
+<p><%= @dept %></p>
+<%= link_to 'Edit Dept', edit_shop_dept_path([@shop, @dept])
+<%= link_to 'Delete Dept', [@shop, @dept], method: :delete %>
+<%= link_to 'back to depts', shop_depts_path(@shop) %>

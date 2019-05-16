@@ -1,7 +1,7 @@
 class ShopsController < ApplicationController
 before_action :set_shop, only: [:show, :edit, :update, :destroy]
 
-before_action :set_shop, only: [:show, :edit, :update, :destroy]
+
  def index
    @shops = Shop.all
    # render: :index
@@ -32,7 +32,7 @@ end
 
    if @shop.save
      # redirect_to shop_path(@shop) same as below
-     redirect_to @shop
+     redirect_to shops_path
    else
      render :new
    end
